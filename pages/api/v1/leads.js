@@ -1,7 +1,6 @@
 import api from '../../../api'
 import axios from 'axios'
 export default async function (req, res) {
-	const data = req.body
 	const data = {
 		customerFirstName: req.body['1.3'],
 		customerLastName: req.body['1.6'],
