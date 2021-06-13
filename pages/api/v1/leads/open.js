@@ -11,10 +11,10 @@ export default async (req, res) => {
 	}
 
 	try {
-		const apiCall = await axios(options)
-
-		res.status(200).json(apiCall.items)
+		const apiCall = await axios.request(options)
+		console.log(apiCall)
+		res.status(200).json(apiCall.data.items)
 	} catch (error) {
-		res.status(500).json({message: 'Opps something went wrong!!!'})
+		res.status(500).json({message: error})
 	}
 }
