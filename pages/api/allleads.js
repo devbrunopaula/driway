@@ -11,7 +11,7 @@ export default async (req, res) => {
 	}
 
 	try {
-		const apiCall = await axios.get(options)
+		const apiCall = await axios(options)
 
 		res.status(200).json(apiCall.items)
 	} catch (error) {
