@@ -22,7 +22,7 @@ ${req.body['2']}
 
 Service Address:
 ${req.body['39.1']} 
-${req.body['1.2']}
+${req.body['39.2']}
 ${req.body['39.3']}, ${req.body['39.4']} ${req.body['39.5']}
 
 
@@ -96,9 +96,8 @@ Date: ${req.body['date_created']}
 
 	try {
 		const response = await api('post', '/webleads', data)
-		// console.log(req.body)
 		res.status(201).json(response)
 	} catch (error) {
-		res.status(500).json(error)
+		res.status(500).json({message: 'something went wrong !!!'})
 	}
 }
