@@ -12,7 +12,7 @@ export default async function (req, res) {
 		state: req.body['39.4'],
 		zip: req.body['39.5'],
 		country: req.body['39.6'],
-		notifyClient, false,
+		notifyClient: false,
 		note: `
 LEAD# ${req.body.id}		
 Your Name: ${req.body['1.3']} ${req.body['1.6']}     
